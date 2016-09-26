@@ -1,6 +1,6 @@
 package com.abodu;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by dgliu on 16-9-26.
@@ -118,8 +118,49 @@ public class Solution {
     }
 
     ////////////////////////////////////////////////////
+    private void reverseSequence(Scanner scan) {
+        int n = scan.nextInt();
+        String s = "";
+        for (int i = 0; i < n; i++) {
+            s = scan.nextInt() + " " + s;
+        }
+        System.out.println(s);
+    }
+
+    ////////////////////////////////////////////////////
+    private void findPhoneByName(Scanner scan) {
+        int n = scan.nextInt();
+        HashMap<String, String> hm = new HashMap<>(n);
+        scan.nextLine();
+        for (int i = 0; i < n; i++) {
+            String key = scan.next();
+            String val = scan.next();
+            hm.put(key, val);
+        }
+        while (scan.hasNext() && n > 0) {
+            String qs = scan.next();
+            if ("".equals(hm.get(qs)) || null == hm.get(qs)) {
+                System.out.println("Not found");
+            } else {
+                System.out.println(qs + "=" + hm.get(qs));
+            }
+            n--;
+        }
+    }
+
+    ////////////////////////////////////////////////////
+    private void displayRecursion(Scanner scan) {
+        new Thread(() -> {
+            System.out.println("connectToService");
+            System.out.println("sendNotification");
+        }).start();
+    }
+
+    private final  List<Integer> priceValues=Arrays.asList(2,1,1,2,2,2,1,8,9,15);
+    ////////////////////////////////////////////////////
     private void all_scan_entrance() {
-        Scanner scan = new Scanner(System.in);
+        ///scanner
+//        Scanner scan = new Scanner(System.in);
 
 //        helloWorld();
 //        displayDataTypes(scan);
@@ -127,8 +168,18 @@ public class Solution {
 //        chkNumberWeird(scan);
 //        chkPersonAge(scan);
 //        displayLoop(scan);
-        splitStrings(scan);
-        scan.close();
+//        splitStrings(scan);
+//        reverseSequence(scan);
+//        findPhoneByName(scan);
+//        displayRecursion(scan);
+
+//        scan.close();
+
+        //none-scanner
+//        List<String> people=new ArrayList<>(30);
+//        for (int i = 0; i < people.size(); i++) {
+//            people.sort(Comparator.comparing(people.get(i)).reversed());
+//        }
     }
 
     public static void main(String[] args) {
