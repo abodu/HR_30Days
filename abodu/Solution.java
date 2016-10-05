@@ -1,5 +1,4 @@
-package com.abodu;
-
+package HR_30Days.abodu;
 import java.util.*;
 
 /**
@@ -148,15 +147,6 @@ public class Solution {
         }
     }
 
-    ////////////////////////////////////////////////////
-    private void displayRecursion(Scanner scan) {
-        new Thread(() -> {
-            System.out.println("connectToService");
-            System.out.println("sendNotification");
-        }).start();
-    }
-
-    private final  List<Integer> priceValues=Arrays.asList(2,1,1,2,2,2,1,8,9,15);
     ////////////////////////////////////////////////////
     private void all_scan_entrance() {
         ///scanner
