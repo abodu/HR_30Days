@@ -6,12 +6,12 @@ import java.util.*;
  */
 public class Solution {
     ////////////////////////////////////////////////////
-    private void helloWorld() {
+    private void Day0_HelloWorld() {
         System.out.printf("Hello World!");
     }
 
     ////////////////////////////////////////////////////
-    private void displayDataTypes(Scanner scan) {
+    private void Day1_DataTypes(Scanner scan) {
         int i = 4;
         double d = 4.0;
         String s = "HackerRank ";
@@ -25,7 +25,7 @@ public class Solution {
     }
 
     ////////////////////////////////////////////////////
-    private void displayOperator(Scanner scan) {
+    private void Day2_Operator(Scanner scan) {
         double mealCost = scan.nextDouble();
         int tipPercent = scan.nextInt();
         int taxPercent = scan.nextInt();
@@ -36,7 +36,7 @@ public class Solution {
     }
 
     ////////////////////////////////////////////////////
-    private void chkNumberWeird(Scanner scan) {
+    private void Day3_IntroToConditionalStatements(Scanner scan) {
         int n = scan.nextInt();
         String s = "Not Weird";
         if (n % 2 == 1) {
@@ -76,7 +76,7 @@ public class Solution {
         }
     }
 
-    private void chkPersonAge(Scanner scan) {
+    private void Day4_ClassVsInstance(Scanner scan) {
         int T = scan.nextInt();
         for (int i = 0; i < T; i++) {
             int age = scan.nextInt();
@@ -91,7 +91,7 @@ public class Solution {
     }
 
     ////////////////////////////////////////////////////
-    private void displayLoop(Scanner scan) {
+    private void Day5_Loops(Scanner scan) {
         int T = scan.nextInt();
         for (int i = 1; i < 11; i++) {
             System.out.printf("%d x %d = %d\n", T, i, T * i);
@@ -99,7 +99,7 @@ public class Solution {
     }
 
     ////////////////////////////////////////////////////
-    private void splitStrings(Scanner scan) {
+    private void Day6_Review_SpiltStrings(Scanner scan) {
         int n = scan.nextInt();
         scan.nextLine();
         for (int i = 0; i < n; i++) {
@@ -117,7 +117,7 @@ public class Solution {
     }
 
     ////////////////////////////////////////////////////
-    private void reverseSequence(Scanner scan) {
+    private void Day7_Arrays_ReverseSequence(Scanner scan) {
         int n = scan.nextInt();
         String s = "";
         for (int i = 0; i < n; i++) {
@@ -127,7 +127,7 @@ public class Solution {
     }
 
     ////////////////////////////////////////////////////
-    private void findPhoneByName(Scanner scan) {
+    private void Day8_Maps_FindPhoneByName(Scanner scan) {
         int n = scan.nextInt();
         HashMap<String, String> hm = new HashMap<>(n);
         scan.nextLine();
@@ -150,20 +150,20 @@ public class Solution {
     ////////////////////////////////////////////////////
     private void all_scan_entrance() {
         ///scanner
-//        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-//        helloWorld();
-//        displayDataTypes(scan);
-//        displayOperator(scan);
-//        chkNumberWeird(scan);
-//        chkPersonAge(scan);
-//        displayLoop(scan);
-//        splitStrings(scan);
-//        reverseSequence(scan);
-//        findPhoneByName(scan);
+//        Day0_HelloWorld();
+//        Day1_DataTypes(scan);
+//        Day2_Operator(scan);
+//        Day3_IntroToConditionalStatements(scan);
+//        Day4_ClassVsInstance(scan);
+//        Day5_Loops(scan);
+//        Day6_Review_SpiltStrings(scan);
+//        Day7_Arrays_ReverseSequence(scan);
+//        Day8_Maps_FindPhoneByName(scan);
 //        displayRecursion(scan);
 
-//        scan.close();
+        scan.close();
 
         //none-scanner
 //        List<String> people=new ArrayList<>(30);
