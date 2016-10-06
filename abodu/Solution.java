@@ -51,10 +51,10 @@ void Day3_IntroToConditionalStatements(Scanner scan) {
 }
 
 ////////////////////////////////////////////////////
-private class Person {
+private class Day4_Person {
   int age;
 
-  public Person(int age) {
+  public Day4_Person(int age) {
     this.age = age;
     if (this.age < 0) {
       this.age = 0;
@@ -81,7 +81,7 @@ void Day4_ClassVsInstance(Scanner scan) {
   int T = scan.nextInt();
   for (int i = 0; i < T; i++) {
     int age = scan.nextInt();
-    Person p = new Person(age);
+    Day4_Person p = new Day4_Person(age);
     p.amIOld();
     for (int j = 0; j < 3; j++) {
       p.yearPasses();
@@ -157,7 +157,7 @@ private int factorial(int n, int sum) { //tail-recursion
   }
 }
 
-void Day9_Recursion(Scanner scan) {
+void Day9_Recursion_Factorial(Scanner scan) {
   int sum = 1;
   int n = scan.nextInt();
   System.out.println(factorial(n, sum));
@@ -182,9 +182,129 @@ void Day10_BinaryNumbers(Scanner scan) {
 }
 
 ////////////////////////////////////////////////////
+
+void Day11_2D_Arrays_GetMaxSumOfHourGlass(Scanner scan) {
+  int[][] array = new int[6][6];
+  for (int i = 0; i < array.length; i++) {
+    for (int j = 0; j < array[i].length; j++) {
+      array[i][j] = scan.nextInt();
+    }
+  }
+  int max = -11111;
+  for (int i = 1; i < array.length - 1; i++) {
+    for (int j = 1; j < array[i].length - 1; j++) {
+      int sum = array[i][j]; //本行中的唯一一个数
+      sum += array[i - 1][j - 1] + array[i - 1][j] + array[i - 1][j + 1]; //上一行的三个数
+      sum += array[i + 1][j - 1] + array[i + 1][j] + array[i + 1][j + 1]; //下一行的三个数
+      if (max < sum) {
+        max = sum;
+//        System.out.println("(" + i + "," + j + ")");
+      }
+    }
+  }
+  System.out.println(max);
+}
+
+////////////////////////////////////////////////////
+class Person {
+  protected String firstName;
+  protected String lastName;
+  protected int idNumber;
+
+  Person(String firstName, String lastName, int idNumber) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.idNumber = idNumber;
+  }
+
+  public void printPerson() {
+    System.out.println("Name: " + lastName + ", " + firstName + "\nID: " + idNumber);
+  }
+}
+
+class Student extends Person {
+  private int[] scores;
+
+  Student(String fn, String ln, int id, int[] scores) {
+    super(fn, ln, id);
+    this.scores = scores;
+  }
+
+  public char calculate() {
+    int sum = 0;
+    for (int i = 0; i < scores.length; i++) {
+      sum += scores[i];
+    }
+    int ave = sum / scores.length;
+    if (90 <= ave && ave <= 100) {
+      return 'O';
+    } else if (80 <= ave && ave < 90) {
+      return 'E';
+    } else if (70 <= ave && ave < 80) {
+      return 'A';
+    } else if (55 <= ave && ave < 70) {
+      return 'P';
+    } else if (40 <= ave && ave < 55) {
+      return 'D';
+    } else {
+      return 'T';
+    }
+  }
+}
+
+void Day12_Inheritance_CalculateScores(Scanner scan) {
+  String firstName = scan.next();
+  String lastName = scan.next();
+  int id = scan.nextInt();
+  int[] testScores = new int[scan.nextInt()];
+  for (int i = 0; i < testScores.length; i++) {
+    testScores[i] = scan.nextInt();
+  }
+  Student s = new Student(firstName, lastName, id, testScores);
+  s.printPerson();
+  System.out.println("Grade: " + s.calculate());
+}
+
+////////////////////////////////////////////////////
+abstract class Book {
+  String title;
+  String author;
+
+  Book(String t, String a) {
+    this.title = t;
+    this.author = a;
+  }
+
+  abstract void display();
+}
+
+class MyBook extends Book {
+  int price;
+
+  MyBook(String title, String author, int price) {
+    super(title, author);
+    this.price = price;
+  }
+
+  void display() {
+    System.out.println("Title: " + title);
+    System.out.println("Author: " + author);
+    System.out.println("Price: " + price);
+  }
+}
+
+void Day13_AbstractClass_ShowBookInfo(Scanner scan) {
+  String title = scan.nextLine();
+  String author = scan.nextLine();
+  int price = scan.nextInt();
+  Book new_novel = new MyBook(title, author, price);
+  new_novel.display();
+}
+
+////////////////////////////////////////////////////
 void all_scan_entrance() {
 //  Day0_HelloWorld();
-  //scanner
+
   Scanner scan = new Scanner(System.in);
 //  Day1_DataTypes(scan);
 //  Day2_Operator(scan);
@@ -194,8 +314,11 @@ void all_scan_entrance() {
 //  Day6_Review_SpiltStrings(scan);
 //  Day7_Arrays_ReverseSequence(scan);
 //  Day8_Maps_FindPhoneByName(scan);
-//  Day9_Recursion(scan);
-  Day10_BinaryNumbers(scan);
+//  Day9_Recursion_Factorial(scan);
+//  Day10_BinaryNumbers(scan);
+//  Day11_2D_Arrays_GetMaxSumOfHourGlass(scan);
+//  Day12_Inheritance_CalculateScores(scan);
+  Day13_AbstractClass_ShowBookInfo(scan);
   scan.close();
 }
 
