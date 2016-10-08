@@ -529,8 +529,15 @@ public class Solution {
 //  printArray(stringArray);
 //}
 
-    public static void main(String[] args) {
-        new Solution().all_scan_entrance();
+    ////////////////////////////////////////////////////
+    class Node {
+        Node left, right;
+        int data;
+
+        Node(int data) {
+            this.data = data;
+            left = right = null;
+        }
     }
 
     int getHeight(Node root) {
@@ -624,14 +631,8 @@ public class Solution {
         scan.close();
     }
 
-    ////////////////////////////////////////////////////
-    class Node {
-        Node left, right;
-        int data;
-
-        Node(int data) {
-            this.data = data;
-            left = right = null;
-        }
+    public static void main(String[] args) {
+        new Solution().all_scan_entrance();
     }
+
 }
