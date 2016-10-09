@@ -1,4 +1,4 @@
-package HR_30Days.abodu;
+package hrcode.tutorials.thirtydays;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
