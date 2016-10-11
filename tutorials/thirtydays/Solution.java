@@ -1,7 +1,5 @@
-package hrcode.tutorials.thirtydays;
+package hackerrank.tutorials.thirtydays;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
 import java.util.Scanner;
 
 /**

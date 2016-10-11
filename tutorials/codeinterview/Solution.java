@@ -1,7 +1,5 @@
-package hrcode.tutorials.codeinterview;
+package hackerrank.tutorials.codeinterview;
 
-
-import com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport;
 
 import java.util.*;
 
