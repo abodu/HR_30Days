@@ -14,33 +14,33 @@ public class Solution {
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day1_DataTypes(Scanner scan) {
+//    void Day1_DataTypes() {
 //        int i = 4;
 //        double d = 4.0;
 //        String s = "HackerRank ";
-//        int si = scan.nextInt();
-//        double sd = scan.nextDouble();
-//        scan.nextLine();
-//        String ss = scan.nextLine();
+//        int si = sc.nextInt();
+//        double sd = sc.nextDouble();
+//        sc.nextLine();
+//        String ss = sc.nextLine();
 //        System.out.println(i + si);
 //        System.out.println(d + sd);
 //        System.out.println(s + ss);
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day2_Operator(Scanner scan) {
-//        double mealCost = scan.nextDouble();
-//        int tipPercent = scan.nextInt();
-//        int taxPercent = scan.nextInt();
+//    void Day2_Operator() {
+//        double mealCost = sc.nextDouble();
+//        int tipPercent = sc.nextInt();
+//        int taxPercent = sc.nextInt();
 //        double realCost = mealCost * (100 + tipPercent + taxPercent) / 100;
 //        int totalCost = (int) Math.round(realCost);
 //        System.out.println("The total meal cost is " + totalCost + " dollars.");
-//        scan.close();
+//        sc.close();
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day3_IntroToConditionalStatements(Scanner scan) {
-//        int n = scan.nextInt();
+//    void Day3_IntroToConditionalStatements() {
+//        int n = sc.nextInt();
 //        String s = "Not Weird";
 //        if (n % 2 == 1) {
 //            s = "Weird";
@@ -79,10 +79,10 @@ public class Solution {
 //        }
 //    }
 //
-//    void Day4_ClassVsInstance(Scanner scan) {
-//        int T = scan.nextInt();
+//    void Day4_ClassVsInstance() {
+//        int T = sc.nextInt();
 //        for (int i = 0; i < T; i++) {
-//            int age = scan.nextInt();
+//            int age = sc.nextInt();
 //            Day4_Person p = new Day4_Person(age);
 //            p.amIOld();
 //            for (int j = 0; j < 3; j++) {
@@ -94,19 +94,19 @@ public class Solution {
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day5_Loops(Scanner scan) {
-//        int T = scan.nextInt();
+//    void Day5_Loops() {
+//        int T = sc.nextInt();
 //        for (int i = 1; i < 11; i++) {
 //            System.out.printf("%d x %d = %d\n", T, i, T * i);
 //        }
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day6_Review_SpiltStrings(Scanner scan) {
-//        int n = scan.nextInt();
-//        scan.nextLine();
+//    void Day6_Review_SpiltStrings() {
+//        int n = sc.nextInt();
+//        sc.nextLine();
 //        for (int i = 0; i < n; i++) {
-//            String inStr = scan.next();
+//            String inStr = sc.next();
 //            String even = "", odd = "";
 //            for (int j = 0; j < inStr.length(); ) {
 //                if (j % 2 == 0) {
@@ -120,27 +120,27 @@ public class Solution {
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day7_Arrays_ReverseSequence(Scanner scan) {
-//        int n = scan.nextInt();
+//    void Day7_Arrays_ReverseSequence() {
+//        int n = sc.nextInt();
 //        String s = "";
 //        for (int i = 0; i < n; i++) {
-//            s = scan.nextInt() + " " + s;
+//            s = sc.nextInt() + " " + s;
 //        }
 //        System.out.println(s);
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day8_Maps_FindPhoneByName(Scanner scan) {
-//        int n = scan.nextInt();
+//    void Day8_Maps_FindPhoneByName() {
+//        int n = sc.nextInt();
 //        HashMap<String, String> hm = new HashMap<>(n);
-//        scan.nextLine();
+//        sc.nextLine();
 //        for (int i = 0; i < n; i++) {
-//            String key = scan.next();
-//            String val = scan.next();
+//            String key = sc.next();
+//            String val = sc.next();
 //            hm.put(key, val);
 //        }
-//        while (scan.hasNext() && n > 0) {
-//            String qs = scan.next();
+//        while (sc.hasNext() && n > 0) {
+//            String qs = sc.next();
 //            if ("".equals(hm.get(qs)) || null == hm.get(qs)) {
 //                System.out.println("Not found");
 //            } else {
@@ -159,15 +159,15 @@ public class Solution {
 //        }
 //    }
 //
-//    void Day9_Recursion_Factorial(Scanner scan) {
+//    void Day9_Recursion_Factorial() {
 //        int sum = 1;
-//        int n = scan.nextInt();
+//        int n = sc.nextInt();
 //        System.out.println(factorial(n, sum));
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day10_BinaryNumbers(Scanner scan) {
-//        String s = Integer.toBinaryString(scan.nextInt());
+//    void Day10_BinaryNumbers() {
+//        String s = Integer.toBinaryString(sc.nextInt());
 //        int max = -1, sum = 0;
 //        for (int i = 0; i < s.length(); i++) {
 //            if (s.charAt(i) == '0') {
@@ -185,11 +185,11 @@ public class Solution {
 //
 //////////////////////////////////////////////////////
 //
-//    void Day11_2D_Arrays_GetMaxSumOfHourGlass(Scanner scan) {
+//    void Day11_2D_Arrays_GetMaxSumOfHourGlass() {
 //        int[][] array = new int[6][6];
 //        for (int i = 0; i < array.length; i++) {
 //            for (int j = 0; j < array[i].length; j++) {
-//                array[i][j] = scan.nextInt();
+//                array[i][j] = sc.nextInt();
 //            }
 //        }
 //        int max = -11111;
@@ -254,13 +254,13 @@ public class Solution {
 //        }
 //    }
 //
-//    void Day12_Inheritance_CalculateScores(Scanner scan) {
-//        String firstName = scan.next();
-//        String lastName = scan.next();
-//        int id = scan.nextInt();
-//        int[] testScores = new int[scan.nextInt()];
+//    void Day12_Inheritance_CalculateScores() {
+//        String firstName = sc.next();
+//        String lastName = sc.next();
+//        int id = sc.nextInt();
+//        int[] testScores = new int[sc.nextInt()];
 //        for (int i = 0; i < testScores.length; i++) {
-//            testScores[i] = scan.nextInt();
+//            testScores[i] = sc.nextInt();
 //        }
 //        Student s = new Student(firstName, lastName, id, testScores);
 //        s.printPerson();
@@ -295,10 +295,10 @@ public class Solution {
 //        }
 //    }
 //
-//    void Day13_AbstractClass_ShowBookInfo(Scanner scan) {
-//        String title = scan.nextLine();
-//        String author = scan.nextLine();
-//        int price = scan.nextInt();
+//    void Day13_AbstractClass_ShowBookInfo() {
+//        String title = sc.nextLine();
+//        String author = sc.nextLine();
+//        int price = sc.nextInt();
 //        Book new_novel = new MyBook(title, author, price);
 //        new_novel.display();
 //    }
@@ -321,10 +321,10 @@ public class Solution {
 //        }
 //    }
 //
-//    void Day14_Scope_Difference(Scanner scan) {
-//        int[] a = new int[scan.nextInt()];
+//    void Day14_Scope_Difference() {
+//        int[] a = new int[sc.nextInt()];
 //        for (int i = 0; i < a.length; i++) {
-//            a[i] = scan.nextInt();
+//            a[i] = sc.nextInt();
 //        }
 //        Difference difference = new Difference(a);
 //        difference.computeDifference();
@@ -363,7 +363,7 @@ public class Solution {
 //        return listHead;
 //    }
 //
-//    void Day15_LinkedList(Scanner sc) {
+//    void Day15_LinkedList() {
 //        Node head = null;
 //        int N = sc.nextInt();
 //        while (N-- > 0) {
@@ -374,7 +374,7 @@ public class Solution {
 //    }
 //
 //    ////////////////////////////////////////////////////
-//    void Day16_Exceptions(Scanner sc) {
+//    void Day16_Exceptions() {
 //        String s = sc.next();
 //        try {
 //            System.out.println(Integer.parseInt(s));
@@ -398,7 +398,7 @@ public class Solution {
 //        }
 //    }
 //
-//    void Day17_MoreExceptions(Scanner sc) {
+//    void Day17_MoreExceptions() {
 //        int T = sc.nextInt();
 //        while (T-- > 0) {
 //            int n = sc.nextInt();
@@ -435,7 +435,7 @@ public class Solution {
 //    }
 //
 //    //private void pushChar
-//    void Day18_StacksAndQueues_checkPalindrome(Scanner sc) {
+//    void Day18_StacksAndQueues_checkPalindrome() {
 //        String input = sc.nextLine();
 //        char[] s = input.toCharArray();
 //        InnerSolution p = new InnerSolution();
@@ -474,7 +474,7 @@ public class Solution {
 //        }
 //    }
 //
-//    void Day19_Interfaces_DivisorSum(Scanner sc) {
+//    void Day19_Interfaces_DivisorSum() {
 //        int n = sc.nextInt();
 //        AdvancedArithmetic mc = new Calculator();
 //        int sum = mc.divisorSum(n);
@@ -504,7 +504,7 @@ public class Solution {
 //        return totalSwap;
 //    }
 //
-//    void Day20_Sorting_BubbleSort(Scanner sc) {
+//    void Day20_Sorting_BubbleSort() {
 ////  int n=sc.nextInt();
 //        int[] a = new int[sc.nextInt()];
 //        for (int i = 0; i < a.length; i++) {
@@ -582,7 +582,7 @@ public class Solution {
 //        return root;
 //    }
 //
-//    void Day22_BinarySearchTree_getHeight(Scanner sc) {
+//    void Day22_BinarySearchTree_getHeight() {
 //        int T = sc.nextInt();
 //        Node root = null;
 //        while (T-- > 0) {
@@ -591,7 +591,7 @@ public class Solution {
 //        System.out.println(getHeight(root));
 //    }
 //
-//    void Day23_BinarySearchTree_levelOrder(Scanner sc) {
+//    void Day23_BinarySearchTree_levelOrder() {
 //        int T = sc.nextInt();
 //        Node root = null;
 //        while (T-- > 0) {
@@ -599,101 +599,148 @@ public class Solution {
 //        }
 //        levelOrder(root);
 //    }
+//
+//    ////////////////////////////////////////////////////
+//    class Node {
+//        int data;
+//        Node next;
+//
+//        Node(int d) {
+//            data = d;
+//            next = null;
+//        }
+//    }
+//
+//    Node removeDuplicates(Node head) {
+//        if (head == null || head.next == null) {
+//            return head;
+//        }
+//        Node nc = head;
+//        Node nn = head.next;
+//        while (nn != null) {
+//            if (nc.data == nn.data) {
+//                // need to remove nc from list
+//                nc.next = nn.next;
+//            } else {
+//                nc = nn;
+//            }
+//
+//            nn = nn.next;
+//        }
+//        return head;
+//    }
+//
+//    Node insert(Node head, int data) {
+//        if (head == null) {
+//            return new Node(data);
+//        }
+//        Node cur = head;
+//        while (cur.next != null) {
+//            cur = cur.next;
+//        }
+//        cur.next = new Node(data);
+//        return head;
+//    }
+//
+//    void display(Node head) {
+//        Node cur = head;
+//        while (cur != null) {
+//            System.out.println(cur.data + " ");
+//            cur = cur.next;
+//        }
+//    }
+//
+//    void Day24_MoreLinkedList_removeDuplicates() {
+//        Node head = null;
+//        int T = sc.nextInt();
+//        while (T-- > 0) {
+//            head = insert(head, sc.nextInt());
+//        }
+//        head = removeDuplicates(head);
+//        display(head);
+//    }
+//
+//    ////////////////////////////////////////////////////
+//    void Day25_RunningTimeAndComplexity_IsPrime() {
+//        int T = sc.nextInt();
+//        while (T-- > 0) {
+//            isPrime(sc.nextInt());
+//        }
+//    }
+//
+//    private void isPrime(int n) {
+//        if (n <= 1) {
+//            System.out.println("Not prime");
+//            return;
+//        }
+//        for (int i = 2; i * i < n; i++) {
+//            if (n % i == 0) {
+//                System.out.println("Not prime");
+//                return;
+//            }
+//        }
+//        System.out.println("Prime");
+//    }
 
     ////////////////////////////////////////////////////
-    class Node {
-        int data;
-        Node next;
-
-        Node(int d) {
-            data = d;
-            next = null;
+    void Day26_NestedLogic_CalculateFine() {
+        int aD = sc.nextInt();
+        int aM = sc.nextInt();
+        int aY = sc.nextInt();
+        int eD = sc.nextInt();
+        int eM = sc.nextInt();
+        int eY = sc.nextInt();
+        if (eY < aY) {
+            System.out.println(10000);
+            return;
         }
-    }
-
-    Node removeDuplicates(Node head) {
-        if (head == null || head.next == null) {
-            return head;
+        if (eY == aY && eM < aM) {
+            System.out.println(500 * (aM - eM));
+            return;
         }
-        Node nc = head;
-        Node nn = head.next;
-        while (nn != null) {
-            if (nc.data == nn.data) {
-                // need to remove nc from list
-                nc.next = nn.next;
-            } else {
-                nc = nn;
-            }
-
-            nn = nn.next;
+        if (eY == aY && eM == aM && eD < aD) {
+            System.out.println(15 * (aD - eD));
+            return;
         }
-        return head;
-    }
-
-    Node insert(Node head, int data) {
-        if (head == null) {
-            return new Node(data);
-        }
-        Node cur = head;
-        while (cur.next != null) {
-            cur = cur.next;
-        }
-        cur.next = new Node(data);
-        return head;
-    }
-
-    void display(Node head) {
-        Node cur = head;
-        while (cur != null) {
-            System.out.println(cur.data + " ");
-            cur = cur.next;
-        }
-    }
-
-    void Day24_MoreLinkedList_removeDuplicates(Scanner sc) {
-        Node head = null;
-        int T = sc.nextInt();
-        while (T-- > 0) {
-            head = insert(head, sc.nextInt());
-        }
-        head = removeDuplicates(head);
-        display(head);
+        System.out.println(0);
     }
 
     ////////////////////////////////////////////////////
-    void all_scan_entrance() {
-
-        Scanner scan = new Scanner(System.in);
+    void Entrance() {
+        sc = new Scanner(System.in);
 //        Day0_HelloWorld();
-//        Day1_DataTypes(scan);
-//        Day2_Operator(scan);
-//        Day3_IntroToConditionalStatements(scan);
-//        Day4_ClassVsInstance(scan);
-//        Day5_Loops(scan);
-//        Day6_Review_SpiltStrings(scan);
-//        Day7_Arrays_ReverseSequence(scan);
-//        Day8_Maps_FindPhoneByName(scan);
-//        Day9_Recursion_Factorial(scan);
-//        Day10_BinaryNumbers(scan);
-//        Day11_2D_Arrays_GetMaxSumOfHourGlass(scan);
-//        Day12_Inheritance_CalculateScores(scan);
-//        Day13_AbstractClass_ShowBookInfo(scan);
-//        Day14_Scope_Difference(scan);
-//        Day15_LinkedList(scan);
-//        Day16_Exceptions(scan);
-//        Day17_MoreExceptions(scan);
-//        Day18_StacksAndQueues_checkPalindrome(scan);
-//        Day19_Interfaces_DivisorSum(scan);
-//        Day20_Sorting_BubbleSort(scan);
+//        Day1_DataTypes();
+//        Day2_Operator();
+//        Day3_IntroToConditionalStatements();
+//        Day4_ClassVsInstance();
+//        Day5_Loops();
+//        Day6_Review_SpiltStrings();
+//        Day7_Arrays_ReverseSequence();
+//        Day8_Maps_FindPhoneByName();
+//        Day9_Recursion_Factorial();
+//        Day10_BinaryNumbers();
+//        Day11_2D_Arrays_GetMaxSumOfHourGlass();
+//        Day12_Inheritance_CalculateScores();
+//        Day13_AbstractClass_ShowBookInfo();
+//        Day14_Scope_Difference();
+//        Day15_LinkedList();
+//        Day16_Exceptions();
+//        Day17_MoreExceptions();
+//        Day18_StacksAndQueues_checkPalindrome();
+//        Day19_Interfaces_DivisorSum();
+//        Day20_Sorting_BubbleSort();
 //        Day21_Generics_printArray();
-//        Day22_BinarySearchTree_getHeight(scan);
-//        Day23_BinarySearchTree_levelOrder(scan);
-        Day24_MoreLinkedList_removeDuplicates(scan);
-        scan.close();
+//        Day22_BinarySearchTree_getHeight();
+//        Day23_BinarySearchTree_levelOrder();
+//        Day24_MoreLinkedList_removeDuplicates();
+//        Day25_RunningTimeAndComplexity_IsPrime();
+        Day26_NestedLogic_CalculateFine();
+        sc.close();
     }
+
+    private Scanner sc = null;
 
     public static void main(String[] args) {
-        new Solution().all_scan_entrance();
+        new Solution().Entrance();
     }
-
 }
