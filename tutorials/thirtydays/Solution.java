@@ -1,5 +1,7 @@
 package hackerrank.tutorials.thirtydays;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -679,33 +681,89 @@ public class Solution {
 //        }
 //        System.out.println("Prime");
 //    }
+//
+//    ////////////////////////////////////////////////////
+//    void Day26_NestedLogic_CalculateFine() {
+//        int aD = sc.nextInt();
+//        int aM = sc.nextInt();
+//        int aY = sc.nextInt();
+//        int eD = sc.nextInt();
+//        int eM = sc.nextInt();
+//        int eY = sc.nextInt();
+//        if (eY < aY) {
+//            System.out.println(10000);
+//            return;
+//        }
+//        if (eY == aY && eM < aM) {
+//            System.out.println(500 * (aM - eM));
+//            return;
+//        }
+//        if (eY == aY && eM == aM && eD < aD) {
+//            System.out.println(15 * (aD - eD));
+//            return;
+//        }
+//        System.out.println(0);
+//    }
+//
+//////////////////////////////////////////////////////
+//void Day27_Testing() {
+//  int T = sc.nextInt();
+//  for (int i = 0; i < T; i++) {
+//    int N = sc.nextInt();
+//    int K = sc.nextInt();
+//    int sum = 0;
+//    for (int j = 0; j < N; j++) {
+//      if (sc.nextInt() < 0) {
+//        sum++;
+//      }
+//    }
+//    if (sum >= K) {
+//      System.out.println("NO");
+//    } else {
+//      System.out.println("YES");
+//    }
+//  }
+//}
+//
+//////////////////////////////////////////////////////
+//void Day28_RegExSample() {
+//  int T = sc.nextInt();
+//  ArrayList<String> a = new ArrayList<>();
+//  for (int i = 0; i < T; i++) {
+//    String curName = sc.next();
+//    String curMail = sc.next();
+//    if (curMail.endsWith("@gmail.com")) {
+//      a.add(curName);
+//    }
+//  }
+//  Collections.sort(a);
+//  for (String s : a) {
+//    System.out.println(s);
+//  }
+//}
+//
+//////////////////////////////////////////////////////
+//void Day29_BitAnd() {
+//  int T = sc.nextInt();
+//  for (int i = 0; i < T; i++) {
+//    int N = sc.nextInt();
+//    int K = sc.nextInt();
+//    int curMax = -1;
+//    for (int j = 0; j < N; j++) {
+//      for (int s = j + 1; s <= N; s++) {
+//        int ar = j & s;
+//        if (ar < K && ar > curMax) {
+//          curMax = ar;
+//        }
+//      }
+//    }
+//    System.out.println(curMax);
+//  }
+//}
 
-    ////////////////////////////////////////////////////
-    void Day26_NestedLogic_CalculateFine() {
-        int aD = sc.nextInt();
-        int aM = sc.nextInt();
-        int aY = sc.nextInt();
-        int eD = sc.nextInt();
-        int eM = sc.nextInt();
-        int eY = sc.nextInt();
-        if (eY < aY) {
-            System.out.println(10000);
-            return;
-        }
-        if (eY == aY && eM < aM) {
-            System.out.println(500 * (aM - eM));
-            return;
-        }
-        if (eY == aY && eM == aM && eD < aD) {
-            System.out.println(15 * (aD - eD));
-            return;
-        }
-        System.out.println(0);
-    }
-
-    ////////////////////////////////////////////////////
-    void Entrance() {
-        sc = new Scanner(System.in);
+////////////////////////////////////////////////////
+void Entrance() {
+  sc = new Scanner(System.in);
 //        Day0_HelloWorld();
 //        Day1_DataTypes();
 //        Day2_Operator();
@@ -732,13 +790,16 @@ public class Solution {
 //        Day23_BinarySearchTree_levelOrder();
 //        Day24_MoreLinkedList_removeDuplicates();
 //        Day25_RunningTimeAndComplexity_IsPrime();
-        Day26_NestedLogic_CalculateFine();
-        sc.close();
-    }
+//        Day26_NestedLogic_CalculateFine();
+//  Day27_Testing();
+//  Day28_RegExSample();
+//  Day29_BitAnd();
+  sc.close();
+}
 
-    private Scanner sc = null;
+private Scanner sc = null;
 
-    public static void main(String[] args) {
-        new Solution().Entrance();
-    }
+public static void main(String[] args) {
+  new Solution().Entrance();
+}
 }
